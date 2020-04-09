@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="mymvc.Admin_Developer" table="DevloperDetails">
+        <id name="id" type="int" column="Id"></id>
+        <property name="name" column="DeveloperName" not-null="true" />
+        <property name="tech" column="Technology" />
+        <property name="students" column="Students" />
+    </class>
+    <class name="mymvc.Dev_Register" table="New_Registered_Developers">
+    	<id name="name" column="Name"></id>
+    	<property name="email" column="Email" not-null="true" />
+        <property name="pass" column="Password" />
+        <property name="re_pass" column="Confirm_Password" />
+        <property name="phonenumber" column="Phone_Number" />
+    </class>
+    <class name="mymvc.Admin_Students" table="Students_enrolled">
+    	<id name="rollno" column="RollNo"></id>
+    	<property name="stname" column="StudentName" not-null="true" />
+        <property name="devid" column="Dev_Id" />
+    </class>
+    
+</hibernate-mapping>
